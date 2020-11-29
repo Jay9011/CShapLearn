@@ -1,0 +1,27 @@
+﻿@*
+    Razor Syntax
+    @{} 로 선언
+    @   으로 사용.
+*@
+@{
+    ViewData["Title"] = "Test";
+    string text = "Wellcome";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>@text Test Page.</p>
+
+@if (ViewData["Title"].Equals("Test"))
+{
+    <p>이 페이지는 Test 페이지 입니다.</p>
+}
+else
+{
+    <p>이 페이지는 Test 페이지가 아닙니다.</p>
+}
+
+@for (int i = 0; i < 10; i++)
+{
+<p>i = @i</p>
+}
+<p> @@ 사용은 어떻게? </p>
