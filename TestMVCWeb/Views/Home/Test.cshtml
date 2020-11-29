@@ -4,5 +4,11 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>ViewData 를 사용한 객체 사용</p>
+<hr />
+<h2>DisplayFor() 사용</h2>
+@Html.DisplayFor(m => m)
 
-<h2>@ViewData["No"].@ViewData["name"]</h2>
+<h2>Html.ViewData.Model 사용</h2>
+@Html.ViewData.Model.Author
+<br />
+&quot;@Html.ViewData.Model.Contents&quot;

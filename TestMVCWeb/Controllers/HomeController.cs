@@ -45,15 +45,7 @@ namespace TestMVCWeb.Controllers
 
         public IActionResult Test()
         {
-            var firstUser = new User
-            {
-                No = 3,
-                Name = "테스터"
-            };
-
-            // # 3. ViewData 사용
-            ViewData["No"] = firstUser.No;
-            ViewData["Name"] = firstUser.Name;
+            ViewData.Model = Quote.ChooseRandomQuote();
             return View();
         }
 
